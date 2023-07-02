@@ -1,10 +1,17 @@
 <script setup lang="ts">
-// eslint-disable-next-line no-undef
+import { useRootStore } from "./store";
+
 const route = useRoute();
+const store = useRootStore();
 </script>
 
 <template>
-  <div class="bg-black h-screen text-white p-40">
+  <div
+    :class="
+      (store.darkTheme ? 'bg-black  text-white ' : 'bg-white text-black') +
+      'h-screen  p-40'
+    "
+  >
     <NuxtLoadingIndicator />
     <NavBar />
     <NuxtPage />

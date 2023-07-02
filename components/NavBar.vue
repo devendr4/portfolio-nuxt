@@ -1,5 +1,17 @@
 <script setup>
 import { useRootStore } from "../store";
+/* import the fontawesome core */
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+/* import font awesome icon component */
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
+/* import specific icons */
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
+/* add icons to the library */
+library.add([faMoon, faSun, faGithub]);
 const options = [
   { title: "home", link: "/" },
   { title: "about", link: "about" },
@@ -13,7 +25,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <nav class="w-full flex justify-end">
+  <nav class="w-full flex justify-end gap-2 items-center">
     <ul class="flex gap-2">
       <NuxtLink
         v-for="option in options"
@@ -24,6 +36,8 @@ watchEffect(() => {
         <li>{{ option.title }}</li>
       </NuxtLink>
     </ul>
-    <button v-on:click="store.toggleTheme()">theme</button>
+    <button v-on:click="store.toggleTheme()">
+      <FontAwesomeIcon :icon="store.darkTheme ? 'fa-sun' : ' fa-moon'" />
+    </button>
   </nav>
 </template>
