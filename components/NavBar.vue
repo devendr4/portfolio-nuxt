@@ -1,10 +1,15 @@
 <script setup>
+import { useRootStore } from "../store";
 const options = [
   { title: "home", link: "/" },
   { title: "about", link: "about" },
   { title: "projects", link: "projects" },
   { title: "contact", link: "contact" },
 ];
+const store = useRootStore();
+watchEffect(() => {
+  console.log(store.darkTheme);
+}, [store.darkTheme]);
 </script>
 
 <template>
@@ -19,5 +24,6 @@ const options = [
         <li>{{ option.title }}</li>
       </NuxtLink>
     </ul>
+    <button v-on:click="store.toggleTheme()">theme</button>
   </nav>
 </template>

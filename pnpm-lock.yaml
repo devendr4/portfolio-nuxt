@@ -13,6 +13,9 @@ dependencies:
   '@nuxtjs/tailwindcss':
     specifier: ^6.8.0
     version: 6.8.0(webpack@5.88.1)
+  '@pinia/nuxt':
+    specifier: ^0.4.11
+    version: 0.4.11(typescript@5.1.6)(vue@3.3.4)
   pinia:
     specifier: ^2.1.4
     version: 2.1.4(typescript@5.1.6)(vue@3.3.4)
@@ -1344,6 +1347,19 @@ packages:
       - supports-color
       - ts-node
       - webpack
+    dev: false
+
+  /@pinia/nuxt@0.4.11(typescript@5.1.6)(vue@3.3.4):
+    resolution: {integrity: sha512-bhuNFngJpmBCdAqWguezNJ/oJFR7wvKieqiZrmmdmPR07XjsidAw8RLXHMZE9kUm32M9E6T057OBbG/22jERTg==}
+    dependencies:
+      '@nuxt/kit': 3.6.1
+      pinia: 2.1.4(typescript@5.1.6)(vue@3.3.4)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - rollup
+      - supports-color
+      - typescript
+      - vue
     dev: false
 
   /@pkgjs/parseargs@0.11.0:

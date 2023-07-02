@@ -1,11 +1,12 @@
-export const state = () => ({
-  darkTheme: false,
-});
+import { defineStore } from "pinia";
 
-export type RootState = ReturnType<typeof state>;
-
-export const actions: ActionTree = {
-  setTheme({ state, commit }) {
-    commit("setTheme", (state.theme = !state.theme));
+export const useRootStore = defineStore("root", {
+  state: () => ({
+    darkTheme: false,
+  }),
+  actions: {
+    toggleTheme() {
+      this.darkTheme = !this.darkTheme;
+    },
   },
-};
+});
