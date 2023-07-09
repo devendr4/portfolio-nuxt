@@ -9,11 +9,13 @@ const store = useRootStore();
   <div
     :class="
       (store.darkTheme ? 'bg-black  text-white ' : 'bg-white text-black') +
-      'h-screen  p-40'
+      'h-screen p-10  md:p-30 xs:p-2'
     "
   >
-    <NuxtLoadingIndicator />
-    <NavBar />
-    <NuxtPage />
+    <div class="border-2 h-full p-10">
+      <NuxtLoadingIndicator />
+      <NavBar />
+      <NuxtPage />
+    </div>
   </div>
 </template>

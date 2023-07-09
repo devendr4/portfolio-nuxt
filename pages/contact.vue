@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 <template>
   <h1>contact</h1>
   <p>email: devendr4@protonmail.com</p>
-  <FontAwesomeIcon :icon="['fab', 'github']" />
-  <p>github: https://github.com/devendr4</p>
+  <NuxtLink to="https://github.com/devendr4" rel="noreferrer" target="_blank">
+    <FontAwesomeIcon :icon="['fab', 'github']" />
+  </NuxtLink>
 </template>
