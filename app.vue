@@ -12,7 +12,7 @@ const store = useRootStore();
       'h-screen p-10  md:p-30 xs:p-2'
     "
   >
-    <div class="border-2 h-full p-10">
+    <div class="border-2 h-full p-10 overflow-scroll">
       <NuxtLoadingIndicator />
       <NavBar />
       <NuxtPage />

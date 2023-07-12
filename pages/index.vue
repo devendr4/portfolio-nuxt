@@ -1,10 +1,20 @@
+<script setup>
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+</script>
+
 <template>
   <div>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi cum,
-      voluptatum at similique aspernatur quam labore doloribus ea aliquid
-      molestias obcaecati ab! Fugiat illo, alias necessitatibus maiores sed
-      itaque facere.
-    </p>
+    <p>angel altuve</p>
+    <p>software engineer</p>
+    <section>
+      <p>email: devendr4@protonmail.com</p>
+      <NuxtLink
+        to="https://github.com/devendr4"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <FontAwesomeIcon :icon="['fab', 'github']" />
+      </NuxtLink>
+    </section>
   </div>
 </template>
