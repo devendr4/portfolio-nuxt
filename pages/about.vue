@@ -1,3 +1,3 @@
 <template>
   <TemplateAboutTemplate />
-</template>
+</template>;

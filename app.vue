@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useRootStore } from "./store";
 
-const route = useRoute();
 const store = useRootStore();
 </script>
 

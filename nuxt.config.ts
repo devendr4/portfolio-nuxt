@@ -2,4 +2,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt"],
+  build: {
+    transpile: [
+      "@fortawesome/vue-fontawesome"
+    ]
+  }
 });

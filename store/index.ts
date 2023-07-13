@@ -2,11 +2,11 @@ import { defineStore } from "pinia";
 
 export const useRootStore = defineStore("root", {
   state: () => ({
-    darkTheme: true,
+    darkTheme: true
   }),
   actions: {
-    toggleTheme() {
+    toggleTheme () {
       this.darkTheme = !this.darkTheme;
-    },
-  },
+    }
+  }
 });
