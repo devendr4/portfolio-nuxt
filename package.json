@@ -20,12 +20,14 @@
     "nuxt": "^3.6.1"
   },
   "dependencies": {
+    "@davestewart/nuxt-scrollbar": "^1.0.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@heroicons/vue": "^2.0.18",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@pinia/nuxt": "^0.4.11",
-    "pinia": "^2.1.4"
+    "pinia": "^2.1.4",
+    "vue3-perfect-scrollbar": "^1.6.1"
   }
 }

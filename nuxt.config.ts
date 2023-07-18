@@ -1,10 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@pinia/nuxt",
+
+    "@davestewart/nuxt-scrollbar",
+  ],
   build: {
-    transpile: [
-      "@fortawesome/vue-fontawesome"
-    ]
-  }
+    transpile: ["@fortawesome/vue-fontawesome"],
+  },
 });
