@@ -4,3 +4,9 @@ export interface Experience {
   endYear: string;
   duties: string;
 }
+
+export type Project = {
+  name: string;
+  desc: string;
+  stack?: string[];
+};

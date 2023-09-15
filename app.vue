@@ -11,7 +11,7 @@ const onScroll = () => {
   <div
     :class="
       (store.darkTheme ? 'bg-foreground text-white' : 'bg-white text-black') +
-        ' h-screen p-10  md:p-30 xs:p-2'
+      ' h-screen p-10  md:p-30 xs:p-2'
     "
   >
     <div
@@ -21,7 +21,7 @@ const onScroll = () => {
       "
     >
       <NuxtScrollbar tag="aside" class="h-full" @ps-scroll-y="onScroll">
-        <div class="p-10">
+        <div class="p-10 h-full">
           <NuxtLoadingIndicator />
           <NavBar />
           <NuxtPage />
