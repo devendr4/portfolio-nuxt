@@ -2,6 +2,13 @@
 export default {
   content: [],
   theme: {
+    extend: {
+      transitionProperty: {
+        width: "width",
+        height: "height",
+      },
+    },
+
     colors: {
       background: "#171e20",
       foreground: "#2C3333",

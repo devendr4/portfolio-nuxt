@@ -5,8 +5,8 @@ export interface Experience {
   duties: string;
 }
 
-export type Project = {
-  name: string;
-  desc: string;
+export interface Project {
+  title: string;
+  description: string;
   stack?: string[];
-};
+}

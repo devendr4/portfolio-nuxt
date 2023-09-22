@@ -1,5 +1,6 @@
 <script setup>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+const a = 2;
 </script>
 
 <template>

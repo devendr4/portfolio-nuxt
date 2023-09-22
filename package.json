@@ -29,6 +29,7 @@
     "@nuxtjs/google-fonts": "^3.0.2",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@pinia/nuxt": "^0.4.11",
+    "eslint-plugin-tailwindcss": "^3.13.0",
     "pinia": "^2.1.4",
     "prettier": "^3.0.3",
     "vue3-perfect-scrollbar": "^1.6.1"
