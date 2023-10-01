@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="border-white border-4 p-3 h-96 bg-card bg-opacity-80 shadow-card rounded-xl"
-  >
+  <div class="h-96 rounded-xl border-4 border-white bg-card/80 p-3 shadow-card">
     <slot />
   </div>
 </template>

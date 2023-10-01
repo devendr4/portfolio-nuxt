@@ -14,7 +14,7 @@ const options = [
   { title: "home", link: "/" },
   { title: "about", link: "/about" },
   { title: "projects", link: "projects" },
-  { title: "contact", link: "contact" }
+  { title: "contact", link: "contact" },
 ];
 const store = useRootStore();
 
@@ -25,7 +25,7 @@ const setOpen = () => {
 </script>
 
 <template>
-  <nav class="hidden w-full md:flex justify-end gap-2 items-center">
+  <nav class="hidden w-full items-center justify-end gap-2 md:flex">
     <ul class="flex gap-2">
       <NuxtLink
         v-for="option in options"
@@ -45,8 +45,8 @@ const setOpen = () => {
   </button>
 
   <nav
-    class="flex justify-center md:hidden h-full opacity-95 backdrop-blur-3xl bg-primary absolute top-0 right-0 z-50 p-5"
-    :class="isOpen ? 'w-4/12' : 'w-0 hidden'"
+    class="absolute right-0 top-0 z-50 flex h-full justify-center bg-primary p-5 opacity-95 backdrop-blur-3xl md:hidden"
+    :class="isOpen ? 'w-4/12' : 'hidden w-0'"
   >
     <ul class="flex flex-col gap-2">
       <button class="text-xl" @click="store.toggleTheme()">

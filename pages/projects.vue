@@ -1,24 +1,25 @@
-<script setup>
-import { projects } from "@/utils/data";
+<script setup lang="ts">
 import { storeToRefs } from "pinia";
+import { projects } from "@/utils/data";
 import { useRootStore } from "~/store";
 const { selectedProject } = storeToRefs(useRootStore());
-console.log(projects.find((v) => v.title === selectedProject.title));
+console.log(projects.find(v => v.title === selectedProject.value?.title));
+
 watchEffect(() => {
-  console.log(projects.find((v) => v.title === selectedProject.title));
+  console.log(projects.find(v => v.title === selectedProject.value?.title));
 });
 </script>
 
 <template>
   <section
-    class="flex justify-center flex-wrap h-full relative"
-    :class="selectedProject ? 'flex-row' : 'flex-col'"
+    class="relative flex h-full flex-wrap justify-center"
+    :class="selectedProject ? 'flex-col' : 'flex-col'"
   >
     <h1 v-if="!selectedProject" class="w-full">projects</h1>
 
     <button
-      class="w-full bg-black"
       v-else
+      class="w-full bg-black"
       @click="
         () => {
           console.log('click');
@@ -30,22 +31,25 @@ watchEffect(() => {
     </button>
 
     <div
-      class="flex flex-col p-3 items-center md:flex-row justify-center h-1/2 gap-9"
+      class="flex h-1/2 flex-col items-center justify-center gap-9 p-3 md:flex-row"
     >
-      <ProjectCard
-        v-for="p in //selectedProject
-        //? projects.filter((v) => v.title === selectedProject.title):
-        projects.slice(0, 3)"
-        @click="
-          () => {
-            selectedProject = p;
-          }
-        "
-        :title="p?.title || ''"
-        :description="p?.description || ''"
-        :stack="p.stack || []"
-        :key="p.title"
-      />
+      <TransitionGroup>
+        <ProjectCard
+          v-for="p in selectedProject
+            ? projects.filter(v => v.title === selectedProject?.title)
+            : projects.slice(0, 3)"
+          :key="p.title"
+          class="grow-0"
+          :title="p?.title || ''"
+          :description="p?.description || ''"
+          :stack="p.stack || []"
+          @click="
+            () => {
+              selectedProject = p;
+            }
+          "
+        />
+      </TransitionGroup>
     </div>
     <span class="flex gap-2">
       <p>back</p>

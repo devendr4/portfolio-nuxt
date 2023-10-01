@@ -5,7 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <component :is="props.variant || 'h1'" class="w-full text-3xl py-3 font-bold">
+  <component :is="props.variant || 'h1'" class="w-full py-3 text-3xl font-bold">
     <slot />
   </component>
 </template>

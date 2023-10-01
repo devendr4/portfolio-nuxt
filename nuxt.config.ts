@@ -2,10 +2,12 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
+    "@nuxtjs/eslint-module",
     "@nuxtjs/tailwindcss",
     "@pinia/nuxt",
     "@nuxtjs/google-fonts",
     "@davestewart/nuxt-scrollbar",
+    "@tresjs/nuxt",
   ],
   css: ["assets/devices.min.css"],
   googleFonts: {

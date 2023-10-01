@@ -9,8 +9,8 @@ const props = defineProps<{
 </script>
 
 <template>
-  <GenericCard class="flex flex-col gap-5 h-full items-center justify-center">
-    <GenericTitle variant="h1" class="text-center w-full">
+  <GenericCard class="flex h-full flex-col items-center justify-center gap-5">
+    <GenericTitle variant="h1" class="w-full text-center">
       {{ props.title }}
     </GenericTitle>
     <p>{{ props.description }}</p>

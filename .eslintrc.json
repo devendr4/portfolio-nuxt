@@ -8,7 +8,8 @@
     "@nuxtjs/eslint-config-typescript",
     "plugin:@typescript-eslint/recommended",
     "plugin:vue/vue3-essential",
-    "plugin:tailwindcss/recommended"
+    "plugin:tailwindcss/recommended",
+    "prettier"
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
