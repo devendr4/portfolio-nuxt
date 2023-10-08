@@ -1,7 +1,7 @@
 <script setup>
 import { library } from "@fortawesome/fontawesome-svg-core";
 
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 /* import specific icons */
 import { faMoon, faSun, faHamburger } from "@fortawesome/free-solid-svg-icons";
@@ -25,7 +25,7 @@ const setOpen = () => {
 </script>
 
 <template>
-  <nav class="hidden w-full items-center justify-end gap-2 md:flex">
+  <nav class="fixed hidden w-full items-center justify-end bg-primary md:flex">
     <ul class="flex gap-2">
       <NuxtLink
         v-for="option in options"
@@ -37,11 +37,11 @@ const setOpen = () => {
       </NuxtLink>
     </ul>
     <button class="text-xl" @click="store.toggleTheme()">
-      <FontAwesomeIcon :icon="store.darkTheme ? 'fa-sun' : ' fa-moon'" />
+      <!-- <font-awesome-icon :icon="store.darkTheme ? 'fa-sun' : ' fa-moon'" /> -->
     </button>
   </nav>
   <button class="md:hidden" @click="setOpen()">
-    <FontAwesomeIcon icon="fa-hamburger" />
+    <!-- <font-awesome-icon icon="fa-hamburger" /> -->
   </button>
 
   <nav
@@ -50,7 +50,7 @@ const setOpen = () => {
   >
     <ul class="flex flex-col gap-2">
       <button class="text-xl" @click="store.toggleTheme()">
-        <FontAwesomeIcon :icon="store.darkTheme ? 'fa-sun' : ' fa-moon'" />
+        <!-- <font-awesome-icon :icon="store.darkTheme ? 'fa-sun' : ' fa-moon'" /> -->
       </button>
       <NuxtLink
         v-for="option in options"

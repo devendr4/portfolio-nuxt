@@ -13,11 +13,11 @@ const store = useRootStore();
 
 <template>
   <GenericCard
-    class="max-w-[24rem] grow-0 gap-4 backdrop-blur transition-all"
+    class="w-64 gap-4 text-clip bg-black backdrop-blur transition-all"
     :class="
       store.selectedProject?.title === props.title
         ? 'open  z-50'
-        : 'z-10 w-full cursor-pointer md:w-96'
+        : 'z-10 w-full cursor-pointer'
     "
   >
     <div

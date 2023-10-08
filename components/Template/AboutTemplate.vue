@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
@@ -18,7 +17,7 @@ library.add(faUserSecret);
         </li>
       </ul>
     </section>
-    <FontAwesomeIcon icon="{faUserSecret}" />
+    <!-- <font-awesome-icon :icon="{ faUserSecret }" /> -->
     <section class="p-3">
       <h2 class="mb-2">skills</h2>
       <ul class="flex flex-col gap-3">

@@ -31,7 +31,7 @@ watchEffect(() => {
     </button>
 
     <div
-      class="flex h-1/2 flex-col items-center justify-center gap-9 p-3 md:flex-row"
+      class="flex h-1/2 w-full flex-col items-center justify-center gap-9 bg-primary p-3 md:flex-row"
     >
       <TransitionGroup>
         <ProjectCard
@@ -39,7 +39,7 @@ watchEffect(() => {
             ? projects.filter(v => v.title === selectedProject?.title)
             : projects.slice(0, 3)"
           :key="p.title"
-          class="grow-0"
+          class=""
           :title="p?.title || ''"
           :description="p?.description || ''"
           :stack="p.stack || []"
